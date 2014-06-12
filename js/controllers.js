@@ -2,9 +2,10 @@ var careersApp = angular.module('careersApp', []);
 
 careersApp.controller('JobCtrl', function ($scope, $http) {
 
-    $http.get("http://spreadsheets.google.com/feeds/list/10MALD_MqbRCOCVLGwRbPBCIs-EGzReV5c6XsiAowZk4/od6/public/full?alt=json")
+    $http.get("http://oregonstateparks.org/data/index.cfm/parks")
         .success(function(data){
             console.log(data);
+            $scope.parks = data;
         })
 
     // $scope.jobs = jobs;
