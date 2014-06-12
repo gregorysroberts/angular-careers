@@ -1,17 +1,18 @@
-<html ng-app="careersApp">
+<html>
 <head>
-  ...
   <script type="text/javascript" src="angular.min.js"></script>
   <script src="js/controllers.js"></script>
 </head>
-<body ng-controller="JobCtrl">
+<body ng-app="careersApp" ng-controller="JobCtrl">
 
-  <ul>
-    <li ng-repeat="job in jobs">
-      {{job.gsx$position.$t}}
-      <p>{{job.gsx$description.$t}}</p>
-    </li>
-  </ul>
+  	<div class="pure-g-r" ng-repeat="job in jobs.feed.entry">
+  		<div class="pure-u-3-4 position">
+  			<a href="{{job.gsx$url.$t}}">
+		    	<p><b>{{job.gsx$position.$t}}</b></p>
+		    </a>
+		    <p>{{job.gsx$description.$t}}</p>
+    	</div>
+  	</div>
 
 </body>
 </html>
