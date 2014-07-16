@@ -1,25 +1,13 @@
-<html>
-<head>
-  <script type="text/javascript" src="angular.min.js"></script>
-  <script src="js/controllers.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.min.js"></script>
+  <script src="/careers-controller.js"></script>
 </head>
 <body ng-app="careersApp" ng-controller="JobCtrl">
 
-<!--   	<div class="pure-g-r" ng-repeat="job in jobs.feed.entry">
-  		<div class="pure-u-3-4 position">
-  			<a href="{{job.gsx$url.$t}}">
-		    	<p><b>{{job.gsx$position.$t}}</b></p>
-		    </a>
-		    <p>{{job.gsx$description.$t}}</p>
-    	</div>
-  	</div> -->
-
-    <p ng-repeat="park in parks">
-      {{park.park_name}}
-    </p>
-
-</body>
-</html>
-
-
-
+        <div class="pure-g-r" ng-repeat="job in jobs.feed.entry">
+      <div class="pure-u-3-4 position">
+        <a href="{{job.gsx$url.$t}}">
+          <p><b>{{job.gsx$position.$t}}</b></p>
+        </a>
+        <p>{{job.gsx$description.$t}}</p>
+              </div>
+    </div>
