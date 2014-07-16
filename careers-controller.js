@@ -2,13 +2,13 @@ var careersApp = angular.module('careersApp', []);
 
 careersApp.controller('JobCtrl', function ($scope, $http) {
 
-    $http.get("http://oregonstateparks.org/data/index.cfm/parks")
+    $http.jsonp("http://spreadsheets.google.com/feeds/list/10MALD_MqbRCOCVLGwRbPBCIs-EGzReV5c6XsiAowZk4/od6/public/full?alt=json-in-script" + "&callback=JSON_CALLBACK")
         .success(function(data){
             console.log(data);
             $scope.parks = data;
         })
 
-    // $scope.jobs = jobs;
+    // $scope.jobs = 
 
     // {
     //     "version": "1.0",
@@ -107,7 +107,7 @@ careersApp.controller('JobCtrl', function ($scope, $http) {
     //                     "$t": "The Internal Security Auditor is responsible for preparing the company for SOC1 and PCI audits. We need someone who is eager to learn, confident in his/her skills, and comfortable working with people in large and small groups."
     //                 },
     //                 "gsx$post": {
-    //                     "$t": "TRUE"
+    //                     "$t": "FALSE"
     //                 },
     //                 "gsx$url": {
     //                     "$t": "/careers/security-auditor"
