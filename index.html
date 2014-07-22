@@ -1,13 +1,1254 @@
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.min.js"></script>
-  <script src="/careers-controller.js"></script>
-</head>
-<body ng-app="careersApp" ng-controller="JobCtrl">
+<html lang="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Careers At InsideSales.com | Jobs At InsideSales.com | Jobs In Utah</title>
+    <meta name="description" content="InsideSales.com is the market leader in the emerging sales acceleration market. Inc. Magazine recently recognized the company as the 5th fastest growing software company in the country.">
+    <meta name="keywords" content="Careers At InsideSales.com, Jobs At InsideSales.com, Jobs in Utah, Utah Jobs, ">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="google-site-verification" content="zMk2n2tO6DJtxXbWk7_q91QHgfUcV6jd8C3y5dMjfBw">
+                <meta name="google-site-verification" content="ETayHrCj8SQxezB7GYne-WjIRlMjYPJ-ZJl8nNJZOjU">
+                <meta name="google-site-verification" content="HRw0pR8vp8_xa2Cj3jyoOYoCNcvMRmDj1jGGpohVKTw">
+                <meta name="google-site-verification" content="YpJCBLLcBXQfMlvke35OcBvwYgIGzaFMLfdN1gSLjmg">
+                <meta property="twitter:account_id" content="393792249">
+    <link rel="icon" type="image/png" href="http://static.insidesales.com/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" type="text/css" media="all" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
 
-        <div class="pure-g-r" ng-repeat="job in jobs.feed.entry">
-      <div class="pure-u-3-4 position">
-        <a href="{{job.gsx$url.$t}}">
-          <p><b>{{job.gsx$position.$t}}</b></p>
-        </a>
-        <p>{{job.gsx$description.$t}}</p>
-              </div>
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="http://insidesales.com/ie.css">
+    <![endif]-->
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+          filter: none;
+        }
+      </style>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+      <style>
+        
+      </style>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="all" href="/is-css-2014.css">
+    
+    <script language="JavaScript" type="text/javascript" src="/javascript/is.js"></script>
+    
+    <script language="JavaScript" type="text/javascript" src="/javascript/is-analytics.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/javascript/is-analytics-settings.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+function createCookie(name,value,minutes) {
+  if (minutes) {
+    var date = new Date();
+    date.setTime(date.getTime()+(minutes*60*1000));
+    var expires = "; expires="+date.toGMTString();
+  }
+  else var expires = "";
+  document.cookie = name+"="+value+expires+"; path=/";
+}
+function readCookie(c_name) {
+var c_value = document.cookie;
+var c_start = c_value.indexOf(" " + c_name + "=");
+if (c_start == -1) {
+  c_start = c_value.indexOf(c_name + "=");
+  }
+if (c_start == -1) {
+  c_value = null;
+  } else {
+  c_start = c_value.indexOf("=", c_start) + 1;
+  var c_end = c_value.indexOf(";", c_start);
+  if (c_end == -1) {
+    c_end = c_value.length;
+    }
+  c_value = unescape(c_value.substring(c_start,c_end));
+  }
+return c_value;
+}
+function eraseCookie(name) {
+  createCookie(name,"",-1);
+}
+function getFormCookie(c_name) {
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+        x=x.replace(/^\s+|\s+$/g,"");
+        if (x==c_name)
+        {
+            return unescape(y);
+        }
+    }
+}
+function setFormCookie(c_name,value,exdays) {
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+</script>
+
+<script language="JavaScript" type="text/javascript" src="/javascript/trackmobile.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://sta.insidesales.com/js/ajax2.js"></script>
+<script language="JavaScript" type="text/javascript" src="/javascript/javascriptglobaltest.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.min.js"></script>
+<script src="/careers-controller.js"></script>
+<style>
+      div.section-banner {
+    background-image: url('http://www.insidesales.com/images/careers-banner.jpg'); 
+    background-size: 960px 635px;
+    background-repeat: no-repeat;
+    height: 449px;
+    color: #ffffff;
+    border-bottom: 5px solid #e9310e;
+          background-position: 36% 0%;
+          padding-top: 0px;
+  }
+  .section-banner h1 {
+          margin-bottom: .6em;
+  }
+  .careers-banner-content {
+    padding-top: 124px;
+    margin-right: 13%;
+          float: right;
+  }
+  .careers-banner-content h1 {
+    color: #ffffff;
+          line-height: 55px;
+  }
+  .careers-banner-content p {
+    color: #ffffff;
+  }
+  .pure-button {
+    font-size: 0.9375em;
+    background-color: #e8310e;
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px;
+    font-weight: 200;
+          width: initial;
+  }
+  .videoHeroMobile {
+      background-size: cover;
+      background-position: top center;
+      background-image: url('http://static.insidesales.com/assets/images/science-of-sales-screenshot-mobile2.jpg');
+      background-repeat: no-repeat;
+      text-align: center;
+      display: inline-block;
+      float: left;
+      height: 295px;
+  }
+  .videoHeroMobile2 {
+      background-size: cover;
+      background-position: top center;
+      background-image: url('http://www.insidesales.com/images/do-good-foundation-video.jpg');
+      background-repeat: no-repeat;
+      text-align: center;
+      display: inline-block;
+      float: right;
+      height: 285px;
+  }
+  #frameVideo {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+  } 
+  .what-we-do-content {
+    padding: 42px 70px 32px 20px;
+    font-weight: 200;
+    float: right;
+    background-color: #ffffff;
+    margin: 0;
+  }
+  .what-we-do-content h2 {
+    color: #3e4546;
+  }
+  .what-we-do-content p {
+    color: #636466;
+  }
+  .what-we-do-content p {
+    margin: 0;
+    padding-top: 6px;
+  }
+  .benefits {
+    background-color: #ededed;
+    clear: both;
+    padding: 37px 50px 70px 70px;
+  }
+  .benefits h2 {
+    color: #3e4546;
+  }
+  .benefits p {
+    font-size: 0.9375em;
+    margin: 0;
+    color: #636466;
+  }
+  .benefits-content {
+    padding-top: 37px;
+    display: inline-block;
+    padding-right: 20px;
+  }
+  .do-good {
+    clear: both;
+    margin: 0;
+  }
+  .do-good-content {
+    padding: 37px 20px 0px 70px;
+    font-weight: 200;
+    display: inline-block;
+    float: left;
+    background-color: #ffffff;
+    margin: 0;
+    color: #3e4546;
+  }
+  .open-positions {
+    clear: both;
+    margin: 0;
+    background-color: #ffffff;
+  }
+  .open-positions-banner {
+    height: 40px;
+    padding-left: 70px;
+    background-color: #434b4d;
+    color: #ffffff;
+    border-bottom: 5px solid #e9310e;
+    padding-bottom: 41px;
+  }
+  #open-positions {
+    color: #ffffff;
+  }
+  .departments {
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: -10px;
+    padding: 0 70px;
+  }
+  .department {
+    display: inline-block;
+    padding: 0 8px;
+  }
+  .department p {
+    font-size: 0.9375em;
+  } 
+  .department-listing {
+    padding: 53px 70px 0 70px;
+          background-color: #ffffff;
+  }
+  .department-listing:last-child {
+          padding-bottom: 40px;
+  }
+  .department-title {
+    border-bottom: 1px solid #dedede;
+  }
+  .department-title h3 {
+    margin: 0 0 10px 0;
+    font-weight: 200;
+    color: #434b4d;
+    font-size: 1.3125em;
+  }
+  .position {
+    display: inline-block;
+    width: 610px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+  .position p {
+    margin: 0px;
+    font-size: 0.9375em;
+    margin-right: 20px;
+  }
+  .apply  {
+    display: inline-block;
+    width: 190px;
+    float: right;
+    margin-top: 46px;
+  }
+  .apply-button {
+    padding: 4px 18.5px;
+  }
+  .back-to-top {
+      position: fixed;
+      bottom: 2em;
+      right: 0px;
+      text-decoration: none;
+      color: #000000;
+      background-color: rgba(235, 235, 235, 0.80);
+      font-size: 12px;
+      padding: 1em;
+      display: none;
+  }
+  .back-to-top:hover {    
+      background-color: rgba(135, 135, 135, 0.50);
+  }
+
+  @media only screen and (max-width: 480px) {
+      .careers-banner-content {
+          margin-right: 4%;
+      }
+      .careers-banner-content h1 {
+          font-size: 2em;
+      }
+  }
+
+  @media only screen and (max-width: 767px) {
+      .what-we-do-content {
+          padding: 20px;
+      }
+      .do-good-content {
+          padding: 20px;
+      }
+      .benefits {
+          padding: 20px;
+      }
+      .department-listing {
+          padding: 50px 20px;
+      }
+      .open-positions-banner {
+          padding-left: 20px;
+      }
+  }
+
+  @media only screen and (max-width: 996px) {
+      .apply {
+          margin-top: 0px;
+      }
+  }
+
+  @media (max-width: 64em) {
+      div.section-banner {
+          height: 284px;
+          background-position: 36% 10%;
+      }
+      .careers-banner-content {
+          padding-top: 30px;
+      }
+  } 
+</style>
+<script type="text/javascript" async="" src="http://munchkin.marketo.net/jquery-latest.min.js"></script></head>
+<body ng-app="careersApp" class="ng-scope">
+<div class="container-new-nav">
+  <style>
+    .phone-number {display:inline-block; color:white}
+    .phone-number a {display:inline-block; color:white}
+    .home-logo-img {float:left;}
+    .new-gray-nav {background-color:#434b4d;}
+    a.navigation-link {color: white; margin: 0 12px; font-size: .875em;}
+    .menu-link {color: white; margin: 0 12px; font-size: .75em; float: left; margin: 4px 10px;}
+    .desktop-nav-links{float: right; margin: 10px 11px;}
+    #desktop-main-nav, #desktop-floated-main-nav, #mobile-main-nav {height: 47px;}
+    #desktop-main-nav img, #desktop-floated-main-nav img, #mobile-main-nav img {margin: 10px 11px;}
+    #number_container_1, #number_container_3 {margin-left: 23px;}
+    #navMobileIcon.mobile-nav-x {font-size: 2em; margin-top: 0px; margin-bottom:0; font-weight:700;}
+    .chat {float: right;}
+
+    #desktop-floated-main-nav {
+    opacity: 0;
+    position: fixed;
+    display: block;
+    width: 100%;
+    max-width: inherit;
+    z-index: 1;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    visibility:hidden;
+    }
+    #collapseContent1 {
+    display:none;
+    -webkit-box-shadow: inset 0px 2px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 2px 10px 0px rgba(0,0,0,0.75);
+    }
+    #collapseContent1 ul {
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+    padding-top: .8em;
+    }
+    #collapseContent1 li {
+    padding: .45em;
+    }
+    .copyrightPatentsContainer {display:none;}
+    #navMobileIcon {float: right; margin: 4px 7px; color: white; font-size:1.8em; cursor:pointer;}
+
+    #collapseContent1 li.secondary-nav-link {padding:0em;}
+
+    #desktop-floated-main-nav.desktop-floated-nav {position: fixed;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+    transition: top 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    }
+    #desktop-floated-main-nav.hidden-floated-nav {
+    top: -47px;
+    transition: top 0.5s ease, opacity .5s ease;
+    opacity: 0;
+    }
+
+
+    @media only screen and (max-width:52.99em) {
+        #desktop-main-nav {display:none;}
+
+        #mobile-main-nav {position:fixed; z-index:5; width: 100%;-webkit-box-shadow: 0px 8px 20px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 8px 20px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 20px -10px rgba(0,0,0,0.75);
+        }
+        .desktop-nav-links {display:none;}
+        .container-update {padding-top: 47px}
+    }
+    @media only screen and (min-width:53em) {
+        #mobile-main-nav {display:none;}
+        #desktop-floated-main-nav.desktop-floated-nav {max-width: inherit;}
+    }
+
+  </style>
+<div id="desktop-main-nav" class="new-gray-nav">
+    <a class="home-logo-img" href="http://www.insidesales.com/">
+        <img src="http://static.insidesales.com/assets/images/home-logo-2014.png" alt="InsideSales.com">
+    </a>
+    <div class="chat">
+    <a href="#" onclick="return SnapEngage.startLink();"><img src="https://www.snapengage.com/statusImage?w=98142088-e0eb-4aae-b326-d0e398b32bfb" alt="Contact us" border="0" style="margin: 0;"></a>
+  </div>
+    <div class="desktop-nav-links">
+        <a href="/products" class="navigation-link">Products</a>
+        <a href="/services" class="navigation-link">Services</a>
+        <a href="/resources" class="navigation-link">Resources</a>
+        <a href="/pricing" class="navigation-link">Pricing</a>
+        <a href="/about_us.php" class="navigation-link">About Us</a>
+        <a href="/login.php" class="navigation-link">Log In</a>
+        <div id="number_container_1" class="phone-number numberContainer"><a href="tel:(866) 342-5370" style="padding-left:0; float:none;">(866) 342-5370</a></div>
     </div>
+</div>
+<div id="desktop-floated-main-nav" class="new-gray-nav desktop-floated-nav">
+    <a class="home-logo-img" href="http://www.insidesales.com/">
+        <img src="http://static.insidesales.com/assets/images/home-logo-2014.png" alt="InsideSales.com">
+    </a>
+    <div class="chat">
+        <a href="#" onclick="return SnapEngage.startLink();"><img src="https://www.snapengage.com/statusImage?w=98142088-e0eb-4aae-b326-d0e398b32bfb" alt="Contact us" border="0" style="margin: 0;"></a>
+  </div>
+    <div class="desktop-nav-links">
+        <a href="/products" class="navigation-link">Products</a>
+        <a href="/services" class="navigation-link">Services</a>
+        <a href="/resources" class="navigation-link">Resources</a>
+        <a href="/pricing" class="navigation-link">Pricing</a>
+        <a href="/about_us.php" class="navigation-link">About Us</a>
+        <a href="/login.php" class="navigation-link">Log In</a>
+        <div id="number_container_3" class="phone-number numberContainer"><a href="tel:(866) 342-5370" style="padding-left:0; float:none;">(866) 342-5370</a></div>
+    </div>
+</div>
+<div id="mobile-main-nav" class="new-gray-nav">
+    <a href="http://www.insidesales.com/">
+        <img src="http://static.insidesales.com/assets/images/home-logo-2014.png" alt="InsideSales.com">
+    </a>
+    <span id="navMobileIcon" class="menu-icon"><span class="menu-link">Menu</span> ≡</span>
+<div id="collapseContent1" class="new-gray-nav">
+<ul class="l-margin-0">
+    <li><a href="/products" class="navigation-link">Products</a></li>
+    <li><a href="/services" class="navigation-link">Services</a></li>
+    <li><a href="/resources" class="navigation-link">Resources</a></li>
+    <li><a href="/about_us.php" class="navigation-link">About Us</a></li>
+    <li><a href="/login.php" class="navigation-link">Log In</a></li>
+    <hr style="width: 90%;">
+    <li class="secondary-nav-link"><a href="/careers" class="navigation-link">Careers</a></li>
+    <li class="secondary-nav-link"><a href="/events" class="navigation-link">Events</a></li>
+    <li class="secondary-nav-link"><a href="/pricing" class="navigation-link">Pricing</a></li>
+    <li class="secondary-nav-link"><a href="/insider" class="navigation-link">Blog</a></li>
+    <li><div id="number_container_2" class="phone-number numberContainer"><a href="tel:(866) 342-5370" style="padding-left:0; float:none;">(866) 342-5370</a></div></li>
+</ul>
+
+</div>
+</div>
+
+<script>
+ //  ---------  collapse content slide down reveal ---------------
+        function showHideContent(i) {
+            //if collapseContent is visible, hide the div
+            if ($('#collapseContent' + i).css('display') == "block") {
+                $('#collapseContent' + i).slideUp('200', function() {
+                    // Animation complete.
+                });
+            }
+            //otherwise, if collapseContent is hidden, show the div
+            else {
+                $('#collapseContent' + i).slideDown('300', function() {
+                    // Animation complete.
+                });
+            }  
+        }
+
+    $('#navMobileIcon').click(function(){
+        showHideContent(1);
+        if (!$('#navMobileIcon').hasClass('mobile-nav-x')) {
+            $('#navMobileIcon').addClass('mobile-nav-x');
+            $('#navMobileIcon').html('&times;');
+        } else {
+            $('#navMobileIcon').removeClass('mobile-nav-x');
+            $('#navMobileIcon').html('<span class="menu-link">Menu</span> &#x2630;');
+        }
+    });
+$(window).scroll(function() {
+console.log('scroll');
+if ($(window).scrollTop()-($('#desktop-main-nav').position().top + $('#desktop-main-nav').height())<0) {
+$('#desktop-floated-main-nav').removeClass('desktop-floated-nav').addClass('hidden-floated-nav');
+} else {
+$('#desktop-floated-main-nav').addClass('desktop-floated-nav').removeClass('hidden-floated-nav');
+}
+});
+</script>
+  </div>
+  <!--Banner-->
+  <div class="container-update">
+    <div class="section-banner">
+      <div class="careers-banner-content">
+        <h1>InsideSales.com<br> Careers</h1>
+        <p>Here's a bit of what you can 
+        <br>expect when you work here:</p>
+        <a class="pure-button" href="#open-positions">See all Job Openings</a>
+      </div>
+    </div>
+
+    <!--What We Do Section-->
+    <div class="pure-g-r">
+      <div class="pure-u-1-2 what-we-do-content hide-for-tablet-up" data-set="career-video">
+        
+        
+      </div>
+      <!--Commercial Video-->
+          <div class="pure-u-1-2 videoHeroMobile">
+       <div class="section-video-play">
+      <a href="http://player.vimeo.com/video/82580492?autoplay=1" class="lightboxme cboxElement">
+        <img src="http://static.insidesales.com/assets/images/images-play-button-c.png" alt="PowerDialer video">
+        <p>Play Video</p>
+      </a>
+        </div>
+          </div>
+
+        <div class="pure-u-1-2 what-we-do-content hide-for-mobile" data-set="career-video">
+
+      <h2 class="move-content">What We Do</h2><p class="move-content">InsideSales.com is the market leader in the emerging sales acceleration market. Breakthrough innovations in cloud-based communications, gamiﬁcation, predictive analytics and data visualization have helped make the company one of the hottest employers in the United States. In fact, Inc. Magazine recently recognized the company as the 5th fastest growing software company in the country.</p></div>
+    </div>
+
+    <!--Employee Benefits-->
+    <div class="pure-g-r benefits">
+      <div class="pure-u-1">
+        <!--Benefits Header-->
+        <div>
+          <h2>Employee Benefits</h2>
+        </div>
+        <!--Benefits lists-->
+        <div class="pure-g-r">
+          <div class="pure-u-1-3 benefits-content">
+            <p><b>Full Healthcare Coverage</b></p>
+            <p>InsideSales.com offers top-tier medical, dental and vision coverage</p>
+          </div>
+          <div class="pure-u-1-3 benefits-content">
+            <p><b>401k Retirement PLan</b></p>
+            <p>We generously match employee retirement contributions</p>
+          </div>
+          <div class="pure-u-1-3 benefits-content">
+            <p><b>Onsite Perks</b></p>
+            <p>Employer paid gym membership, and well-stocked drink fridges</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Do Good Foundation-->
+    <div class="pure-g-r do-good">
+      <!--Do Good Foundation Content-->
+      <div class="pure-u-1-2 do-good-content">
+        <h2>Do Good Foundation</h2>
+        <p>At InsideSales.com, we strive to use our position in the industry to help our local community better itself through our Do Good Foundation. Our foundation donates 1% of our employee time, 1% of our company revenue, and 1% of our product to local, worthy causes.</p>
+      </div>
+      <!--Do Good Video-->
+      <div class="pure-u-1-2 videoHeroMobile2">
+        <div class="section-video-play">
+          <a href="http://player.vimeo.com/video/82580491?autoplay=1" class="lightboxme cboxElement">
+            <img src="http://static.insidesales.com/assets/images/images-play-button-c.png" alt="PowerDialer video">
+            <p>Play Video</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--Open Positions-->
+    <div class="pure-g-r">
+      <!--Open Positions Header-->
+      <div class="pure-u-1 open-positions-banner">
+        <h2 id="open-positions">Open Positions</h2>
+      </div>
+    </div>
+      <!--Departments-->
+    <div class="pure-g-r departments">
+      <div class="pure-u-1-6 department">
+        <p><a href="#administration">Administration</a></p><a href="#administration">
+      </a></div><a href="#administration">
+      </a><div class="pure-u-1-6 department"><a href="#administration">
+        </a><p><a href="#administration"></a><a href="#client-services">Client Services</a></p>
+      </div>
+      <div class="pure-u-1-6 department">
+        <p><a href="#marketing">Marketing</a></p>
+      </div>
+      <div class="pure-u-1-6 department">
+        <p><a href="#information-systems">Information Systems</a></p>
+      </div>
+      <div class="pure-u-1-6 department">
+        <p><a href="#sales">Sales</a></p>
+      </div>
+      <div class="pure-u-1-6 department">
+        <p><a href="#software-development">Software Development</a></p>
+      </div>
+
+    </div><!--Section-->
+
+    <div class="department-listing ng-scope" id="administration" ng-controller="AdminJobCtrl">
+      <div class="department-title">
+        <h3>Administration</h3>
+      </div>
+      <!-- ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Accounts Payable Clerk</b></p>
+          <p class="ng-binding">The Accounts Payable Clerk will develop and maintain vendor relationships to assist the vendor billing and payment. Come grow with our company and ensure our success through your help!</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/careers/ap-clerk">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Senior Buyer</b></p>
+          <p class="ng-binding">The Sr. Buyer will develop and maintain vendor relationships. Come grow with our company and ensure our success through your help.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/careers/procurement-specialist">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Senior Corporate Recruiter</b></p>
+          <p class="ng-binding">The Senior Corporate Recruiter will be in charge of making strategic placements in the company to continue our exponential growth.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/careers/sr-corporate-recruiter">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Accounts Receivable Clerk</b></p>
+          <p class="ng-binding">The Accounts Receivable Clerk will develop customer relationships to assist the customer billing and payment process. We are looking for a highly responsive professional who is an expert at identifying and resolving concerns in order to come to beneficial outcomes.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/careers/ar-clerk">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Talent Acceleration Generalist</b></p>
+          <p class="ng-binding">We need a dedicated individual to join our Talent Acceleration team as we continue to scale at an amazing rate. The Talent Acceleration Generalist will take the lead in employee benefits administration, HRIS administration, on-boarding, exits, and a variety of other projects. You'll be the fuel in taking our top talent to a whole new level.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/talent-acceleration-generalist">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Internal Security Architect</b></p>
+          <p class="ng-binding">The Internal Security Architect is responsible for preparing the company for SOC1 and PCI audits. We need someone who is eager to learn, confident in his/her skills, and comfortable working with people in large and small groups.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/careers/security-auditor">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Legal Administrator</b></p>
+          <p class="ng-binding">We are looking for a driven, experienced Legal Administrator to join our Legal team. Working alongside our general counsel, the administrator will be responsible for reviewing contracts in a highly effective and professional manner, and strategically taking on other projects as assigned.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/legal-administrator">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry -->
+    </div>
+
+
+    <div class="department-listing ng-scope" id="client-services" ng-controller="ClientJobCtrl">
+      <div class="department-title">
+        <h3>Client Services</h3>
+      </div>
+      <!-- ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Product Specialist</b></p>
+          <p class="ng-binding">The Product Specialist will become an expert in the InsideSales.com product's technical workings and practical business application. If you are looking for a career in technical support or business consulting, software implementation, enterprise account management, QA, or software development, this position will provide you with the necessary skills and knowledge.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/general-product-specialist">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Customer Account Executive</b></p>
+          <p class="ng-binding">The Customer Account Executives will effectively manage our clients and key relationships. We provide our team with the current tools and resources, as well as outstanding leadership so they may support, sell, and succeed. Our customers benefit from their seasoned leadership, business knowledge, and their deep understanding of our technology and offerings.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/customer-account-executive">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Implementation Consultant</b></p>
+          <p class="ng-binding">Implementation Consultants oversee the technical setup and configuration for our clients as well as consult with clients on best practices. They leverage creativity and logical skills to build out our sales communication platform for a wide variety of industries. They develop strong relationships with customer business, sales and engineering personnel to ensure complete customer satisfaction and adoption.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/implementation-consultant">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry -->
+    </div>
+
+    <div class="department-listing ng-scope" id="marketing" ng-controller="MarketingJobCtrl">
+      <div class="department-title">
+        <h3>Marketing</h3>
+      </div>
+      <!-- ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Data Visualization Developer</b></p>
+          <p class="ng-binding">The Data Visualization Developer will work collaboratively with designers and developers to create engaging and dynamic digital visuals across web-based and stand alone platforms. They will use programming paradigms and styles such as: Object Oriented Programming, Model View Controller, REST / WSDL / SOAP, and Object Relational Mapping.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/data-visualization-developer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Product Marketing Manager</b></p>
+          <p class="ng-binding">The Product Marketing Manager (PMM) is responsible for the success of a set of products in the marketplace. The overall objective is to achieve and maintain leadership by defining the future of the space and then leading the way in terms of market share and revenues.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/product-marketing-manager">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Front-end Web Developer</b></p>
+          <p class="ng-binding">The Front End Web Developer will be responsible for front-end development and maintenance of our web properties. They will be responsible for building lead generation landing pages for email, paid search, and other channels. The ideal candidate will have front-end web experience, lead generation experience, a knowledge of landing page optimization principles, a love for building beautiful web pages, and an online portfolio to prove it.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/marketing-developer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Website Testing Specialist</b></p>
+          <p class="ng-binding">The Website Testing and Analytics Specialist will be responsible for website A/B testing by channel, and tracking website key performance indicators. If you're a fan of Avinash Kaushik and Tim Ash and can help us take our website testing process to the next level then please apply.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/website-testing-specialist">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry -->
+    </div>
+
+    <div class="department-listing ng-scope" id="information-systems" ng-controller="SystemsJobCtrl">
+      <div class="department-title">
+        <h3>Information Systems</h3>
+      </div>
+      <!-- ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Disaster Recovery Engineer</b></p>
+          <p class="ng-binding">We are looking for a Disaster Recovery Engineer to develop procedures to ensure critical business functions can resume, that data loss is minimized, and that failed systems are repaired or replaced quickly. They will apply a comprehensive knowledge of system disaster recovery and system capacity planning. They will play a key role in identifying and securing back-up systems and written policies and procedures, leveraging the latest trends in technology to help develop creative solutions that meet the needs of our customers.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/disaster-recovery-engineer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Network Operations Specialist</b></p>
+          <p class="ng-binding">The Network Operations Specialist works under the NOC Manager and monitors computer server and network performance. The Network Operations Specialist responds to system alerts and threats and duties related to network operations during one of three 24/5 shifts.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/network-operations-specialist">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">IT Help Desk Specialist</b></p>
+          <p class="ng-binding">The IT Help Desk Specialist has the opportunity to interact with professionals throughout the company in managing office equipment and business procedures.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/helpdesk-specialist">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry -->
+    </div>
+
+    <div class="department-listing ng-scope" id="sales" ng-controller="SalesJobCtrl">
+      <div class="department-title">
+        <h3>Sales</h3>
+      </div>
+      <!-- ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Business Development Representative</b></p>
+          <p class="ng-binding">We are looking for talented Business Development Representatives who will contact and qualify marketing-generated leads and prospective customers. This is an entry-level sales position.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/business-development-representative">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Business Development Specialist</b></p>
+          <p class="ng-binding">We are looking for talented Business Development Specialists who will contact and qualify marketing-generated leads to set appointments for our sales team to close. This is an inbound sales position, differing from the BDR position. The BDS should be a self-starter with a track record of successful, credible lead follow-up and sales development experience.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/inbound-representative">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Regional Sales Manager</b></p>
+          <p class="ng-binding">InsideSales.com is seeking proven, highly motivated, high performance sales professionals to join the Utah based sales team.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/regional-sales-manager">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Sales Account Executive</b></p>
+          <p class="ng-binding">InsideSales.com is experiencing explosive growth and welcomes you to come take a look at this life-changing opportunity. InsideSales.com is seeking proven, highly motivated, high performance sales professionals to join the Utah based sales team.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/sales-account-executive">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Technical Sales Engineer</b></p>
+          <p class="ng-binding">InsideSales.com is looking for a driven technical sales engineer who understands technology's formative capability to optimize business process. The Sales Engineer is responsible for presenting the InsideSales.com products, solutions and architecture in the best light to prospects and customers while removing all technical objections in the sales cycle.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/technical-sales-engineer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Corporate Enterprise Executive</b></p>
+          <p class="ng-binding">The Corporate Enterprise Executive is a seasoned sales professional. They will be a top performer and effective communicator who is prepared to work with the executive level for major and named accounts. They report to the VP of Enterprise Sales, and may be required to travel on occasion to visit an enterprise client or prospective client. In addition to being an outstanding salesman, we need someone who is experienced with SaaS and technologically savvy. This is an inside sales role based at our corporate headquarters in Provo, UT.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/enterprise-account-executive">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Regional Sales Director</b></p>
+          <p class="ng-binding">The Regional Sales Director is a seasoned sales professional. They will be a top performer and effective communicator who is prepared to work with the executive level for major and named accounts. They report to the VP of Enterprise Sales, and may be required to travel on occasion to visit an enterprise client or prospective client. In addition to being an outstanding salesman, we need someone who is experienced with SaaS and technologically savvy. This is a field sales role based in the Northeast and Southeast United States regions.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/regional-sales-director">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry -->
+    </div>
+
+    <div class="department-listing ng-scope" id="software-development" ng-controller="DevJobCtrl">
+      <div class="department-title">
+        <h3>Software Development</h3>
+      </div>
+      <!-- ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Application Architect</b></p>
+          <p class="ng-binding">We are looking for talented and expert Application Architects to develop the next-generation technologies for which we've become the industry leader. In addition to revolutionizing sales automation and lead management technologies, we use our world-class programming skills to innovate in a number of other areas as well.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/application-architect">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Associate UI Designer</b></p>
+          <p class="ng-binding">The product team at InsideSales.com is looking for aspiring designer who wants to work in web interface design. The position offers someone entering the design field the ability to specialize in web interface design which is an increasingly highly sought after discipline.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/ui-ux-designer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Data Visualization Developer</b></p>
+          <p class="ng-binding">The Data Visualization Developer will work collaboratively with designers and developers to create engaging and dynamic digital visuals across web-based and stand alone platforms.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/data-visualization-developer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Product Development Manager</b></p>
+          <p class="ng-binding">We are looking for talented and expert Application Architects to develop the next-generation technologies for which we've become the industry leader. In addition to revolutionizing sales automation and lead management technologies, we use our world-class programming skills to innovate in a number of other areas as well.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/product-development-manager">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Product Manager</b></p>
+          <p class="ng-binding">The product team at InsideSales.com is looking for an aspiring product manager who wants to work with one of the fastest growing SaaS companies in the country as a Product Manager. The position offers someone with a love of technology, research, and client interaction the chance to begin a career in product management.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/product-manager">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Project Manager</b></p>
+          <p class="ng-binding">Insidesales.com is seeking a talented Project Manager (Scrum Master) who will provide project leadership, direction and support for software development teams. This role requires a dynamic individual capable of managing simultaneous complex, cross-functional projects while maintaining close working relationships with product owners and technical teams.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/project-manager">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Quality Assurance Engineer</b></p>
+          <p class="ng-binding">InsideSales.com is looking for an entry level Quality Assurance Engineer to work with our award winning suite of lead management, CRM and dialer software tools. If you are looking to enter into the world of software testing this is an excellent foot hold into the market.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/quality-assurance-engineer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Quality Assurance Manager</b></p>
+          <p class="ng-binding">InsideSales.com is looking for an entry level Quality Assurance Manager to work with our award winning suite of lead management, CRM and dialer software tools. If you are looking to enter into the world of software testing this is an excellent foot hold into the market.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/quality-assurance-manager">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Quality Assurance Specialist</b></p>
+          <p class="ng-binding">We are looking for key players in the support of our technology and existing products. As a Quality Assurance Specialist you work to obtain requested information, resolve problems, and identify opportunities for improvement. We rely on our Quality Assurance Specialists to ensure the integrity of our product so that we may continue to provide the leading Inside Sales technology to our customers.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/quality-assurance-specialist">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Software Engineer</b></p>
+          <p class="ng-binding">We are looking for talented and expert Application Architects to develop the next-generation technologies for which we've become the industry leader. In addition to revolutionizing sales automation and lead management technologies, we use our world-class programming skills to innovate in a number of other areas as well.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/software-engineer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry --><div class="pure-g-r ng-scope" ng-repeat="job in jobs.feed.entry">
+        <div class="pure-u-3-4 position">
+          <p><b class="ng-binding">Senior Software Engineer</b></p>
+          <p class="ng-binding">We are looking for talented and expert Application Architects to develop the next-generation technologies for which we've become the industry leader. In addition to revolutionizing sales automation and lead management technologies, we use our world-class programming skills to innovate in a number of other areas as well.</p>
+        </div>
+        <div class="pure-u-1-4 apply">
+          <a class="pure-button apply-button" href="http://www.insidesales.com/senior-software-engineer">Learn more and Apply</a>
+        </div>
+      </div><!-- end ngRepeat: job in jobs.feed.entry -->
+    </div>
+  </div>
+
+    
+    <script>
+
+/*! appendAround markup pattern. [c]2012, @scottjehl, Filament Group, Inc. MIT/GPL 
+how-to:
+  1. Insert potential element containers throughout the DOM
+  2. give each container a data-set attribute with a value that matches all other containers' values
+  3. Place your appendAround content in one of the potential containers
+  4. Call appendAround() on that element when the DOM is ready
+*/
+(function( $ ){
+  $.fn.appendAround = function(){
+    return this.each(function(){
+      
+      var $self = $( this ),
+          att = "data-set",
+          $parent = $self.parent(), 
+          parent = $parent[ 0 ],
+          attval = $parent.attr( att ),
+          $set = $( "["+ att +"='" + attval + "']" );
+
+    function isHidden( elem ){
+      return $(elem).css( "display" ) === "none";
+    }
+
+    function appendToVisibleContainer(){
+      if( isHidden( parent ) ){
+        var found = 0;
+        $set.each(function(){
+          if( !isHidden( this ) && !found ){
+            $self.appendTo( this );
+            found++;
+            parent = this;
+          }
+        });
+          }
+      }
+      
+      appendToVisibleContainer();
+      
+      $(window).bind( "resize", appendToVisibleContainer );
+      
+    });
+  };
+}( jQuery ));
+
+
+ //try it out
+          $( ".move-content" ).appendAround();
+
+//$( window ).resize(function() {
+   //isAppend();
+//});   
+</script>
+    <style>
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered...
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#000;}
+#colorbox{outline:0;}
+    #cboxContent{margin-top:20px;background:#000;}
+        .cboxIframe{background:#000;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{border:5px solid #000; background:#fff;}
+        #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
+        #cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+        
+        #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
+        #cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(images/controls.png) no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:bottom left;}
+        #cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(images/controls.png) no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:bottom right;}
+        #cboxClose{position:absolute; top:-19px; right:-7px; display:block; background:url(http://www.insidesales.com/images/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px; box-shadow: none;}
+        #cboxClose:hover{background-position:bottom center;}
+
+a.lightboxme:hover > *, a.lightboxme:focus > *, a.lightboxme:focus, a.lightboxme:hover {
+outline: 0;
+text-decoration:none;
+}
+</style>
+<script src="/javascript/colorbox-min.js"></script>
+<script>
+    $( document ).ready(function() {      
+$('a.lightboxme').colorbox({opacity:0.7, iframe:true, maxWidth:'90%', maxHeight:'90%', innerWidth:"100%", innerHeight:"100%"});
+});
+</script>
+
+  <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                return false;
+                }
+            }
+        });
+    });
+  </script> <div class="pure-g-r container-ip-info section">
+      
+    <div class="pure-u-2-3 footer-links"><!-- lost .footer-nav -->
+      <div class="column-footer">
+        <ul class="column-footer-1"><!-- lost .footer-nav-primary -->
+          <li class="nav-header"><a href="/products">Products</a></li>
+          <li><a href="/products/communications/powerdialer">PowerDialer™</a></li>
+          <li><a href="/products/communications/click-to-call">Click-to-Call™</a></li>
+          <li><a href="/products/gamification/powerstandings">PowerStandings™</a></li>
+          <li><a href="/products/communications/vision-by-insidesales">Vision™</a>
+</li>
+<li><a href="/products/communications/mcall">mCall™ for Salesforce1</a></li>
+          <li><a href="/products/predictive-analytics/sales-indicator">Sales Indicator™</a></li>
+          
+          <li><a href="/products/prediction/neuralytics">Neuralytics™</a></li>
+          <li><a href="/products/data-visualization/idx-immersive-data-experience">IDX™</a></li>
+<li><a target="_blank" href="http://www.responseaudit.com/">Response Indicator™</a></li>
+<li><a href="/products/communications/lead-management-platform">Lead Management</a></li>
+                                        
+                                        
+        </ul>
+      </div>
+      <div class="column-footer">
+        <ul class="column-footer-2">
+          <li class="nav-header"><a href="/resources">Resources</a></li>
+          <li><a href="/ebooks">eBooks</a></li>
+          <li><a href="/webinar">Webinars</a></li>
+          <li><a href="/insider">Sales Insider Blog</a></li>
+          <li><a href="/whitepapers">White Papers</a></li>
+        </ul>
+        <ul class="column-footer-3">
+          <li class="nav-header"><a href="/services">Services</a></li>
+          <li><a href="/certification">Certification</a></li>
+          <li><a href="/consulting">Consulting</a></li>
+          <li><a href="/support">Customer Support</a></li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <ul class="column-footer-4">
+          <li class="nav-header"><a href="/about_us.php">About Us</a></li>
+          <li><a href="/contact_us">Contact Us</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/news.php">News</a></li> 
+          <li><a href="/customers">Customers</a></li>     
+        </ul>
+        <ul class="column-footer-5">
+          <li><a href="/sitemap.php">Site Map</a></li>
+          <li><a href="/terms.php">Website Terms of Use</a></li>
+          <li><a href="/privacy_policy.php">Privacy Policy</a></li>
+          <li><a href="http://community.insidesales.com/system-releases">System Updates</a></li>
+
+        </ul>   
+      </div>  
+    </div>
+    <div class="pure-u-1-3 footer-copyright">
+                        <p>
+        © 2004   –   2014 InsideSales.com
+      </p>
+      <p>
+        InsideSales.com technology is protected by the following United States Patents:  8078605, 8325738, 8352389, 8510382, 8566419.
+
+      </p>
+    </div>
+    <div class="pure-u-1 footer-logos l-divider">
+      <div class="pure-g-r">
+        <div class="pure-u-1-3 logo-salesforce-partner">
+          <img src="http://static.insidesales.com/assets/images/AppExchange_Program_Partner-155.png" alt="Salesforce.com AppExchange Partner">
+        </div>          
+        <div class="pure-u-1-3 logo-social-follow">
+                  <a href="http://www.linkedin.com/company/insidesales.com" target="_blank"><img src="http://static.insidesales.com/assets/images/social-li-bw.png?a=1"></a>
+
+                  <a href="http://www.twitter.com/insidesales" target="_blank"><img src="http://static.insidesales.com/assets/images/social-tw-bw.png?a=1"></a>
+                    
+                    <a href="https://plus.google.com/100054686029847901744/posts" target="_blank"><img src="http://static.insidesales.com/assets/images/social-g-bw.png?a=1"></a>
+
+                    <a href="https://www.facebook.com/InsideSalesdotcom" target="_blank"><img src="http://static.insidesales.com/assets/images/social-fb-bw.png?a=1"></a>
+
+                    <a href="http://www.youtube.com/officialinsidesales" target="_blank"><img src="http://static.insidesales.com/assets/images/social-yt-bw.png?a=2"></a>
+        </div>
+        <div class="pure-u-1-3 logo-truste">
+          <div id="9561d897-867e-4736-a8a0-fd416eedaac6" class="truste">
+            <script type="text/javascript" src="//privacy-policy.truste.com/privacy-seal/InsideSales-com,-Inc-/asc?rid=9561d897-867e-4736-a8a0-fd416eedaac6"></script>
+            <a href="//privacy.truste.com/privacy-seal/InsideSales-com,-Inc-/validation?rid=b9af001c-f925-463c-a61b-d27757b16de8" title="Validate TRUSTe privacy certification" target="_blank"><img style="border: none" src="//privacy-policy.truste.com/privacy-seal/InsideSales-com,-Inc-/seal?rid=b9af001c-f925-463c-a61b-d27757b16de8" alt="Validate TRUSTe privacy certification"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="copyrightPatentsContainer">
+<p id="copyrightPatents" class="copyrightPatents">
+© 2004–2014 InsideSales.com, Inc. all rights reserved. Use of the InsideSales.com service and this Web site constitutes acceptance of our <a href="/terms.php">Terms of Use</a> and <a href="/privacy_policy.php">Privacy Policy</a>. InsideSales.com technology is protected by the following United States Patents:  8078605, 8325738, 8352389, 8510382, 8566419.
+</p>
+</div>
+
+<!--  ACCORDIAN JAVASCRIPT  -->
+<script type="text/javascript">
+    // accordion
+    $(".accordion > li > ul").hide();
+    var openSection;
+    $(".accordion > li").prepend("<img src='http://insidesales.com/images/carrot-right.png' class='carrot' />").click(function() {
+    if(!($(this).hasClass("openSection"))) {
+    $(".openSection > ul").slideUp(500);
+    $(".openSection > img.carrot").attr("src", "http://insidesales.com/images/carrot-right.png");
+    $(".openSection").removeClass("openSection");
+    $("> ul", this).slideDown(500);
+    $(this).addClass("openSection");
+    $("> img.carrot", this).attr("src", "http://insidesales.com/images/carrot-down.png");
+} else {
+    $("> ul", this).slideUp(500);
+    $("> img.carrot", this).attr("src", "http://insidesales.com/images/carrot-right.png");
+    $(".openSection").removeClass("openSection");
+}
+}); 
+</script>
+<!-- END ACCORDIAN JAVASCRIPT -->
+<!-- TRACKING JAVASCRIPT -->
+<script type="text/javascript">
+  IS.init();
+  // trackCustomVars();
+
+  var lead_source = getCookie("Analytics_Source_name");
+    if(lead_source.search(" - ") == -1)
+      var lead_source_category = lead_source;
+    else
+      var lead_source_category = lead_source.substring(0, lead_source.search(" - "));
+</script>  
+
+<!-- tracking for iHance --> 
+ <script type="text/javascript" defer="defer" src="http://www7.insidesales.com/insidesales/tag.js"></script> 
+<!-- end tracking for iHance -->
+
+<!-- Start Lead Generation Reporting -->
+<script type="text/javascript">
+//JBC.trackPageClick('21','','Inside Sales');
+// the '1' is for the type of phone numbers to display
+track('/', ['number_container_1','number_container_2','number_container_3','number_container_4','number_container_5'], '1');
+</script>
+<!-- End Lead Generation Reporting -->
+<!-- Start Google Analytics Asynchronous Tracking Code -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-404290-1']);
+  _gaq.push(['_setCustomVar', 4, 'Lead Source', lead_source, 2]);
+  _gaq.push(['_setCustomVar', 5, 'Lead Source Category', lead_source_category, 2]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics Asynchronous Tracking Code -->
+<!--  GOOGLE CODE FOR REMARKETING TAG setup info: http://google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1007341658;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="0" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1007341658/?random=1406040877773&amp;cv=7&amp;fst=1406040877773&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=900&amp;u_w=1600&amp;u_ah=900&amp;u_aw=1600&amp;u_cd=24&amp;u_his=6&amp;u_tz=-360&amp;u_java=true&amp;u_nplug=15&amp;u_nmime=103&amp;frm=0&amp;url=http%3A//www.insidesales.com/careers&amp;ref=http%3A//www.insidesales.com/about_us.php" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no">&lt;img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1007341658/?frame=0&amp;random=1406040877773&amp;cv=7&amp;fst=1406040877773&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=900&amp;u_w=1600&amp;u_ah=900&amp;u_aw=1600&amp;u_cd=24&amp;u_his=6&amp;u_tz=-360&amp;u_java=true&amp;u_nplug=15&amp;u_nmime=103&amp;frm=0&amp;url=http%3A//www.insidesales.com/careers&amp;ref=http%3A//www.insidesales.com/about_us.php" /&gt;</iframe>
+
+<script>
+var gaciframe = $('iframe[name=google_conversion_frame]');
+gaciframe.attr('height', '0');
+</script>
+
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007341658/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+
+<!-- END GOOGLE CODE FOR REMARKETING TAG -->
+<!-- MARKETO TRACKING -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + document.location.protocol +
+  "//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script>
+<script>Munchkin.init('038-GLO-864');</script>
+
+
+
+<!--[if lte IE 9]>
+                        <script src="http://static.insidesales.com/assets/scripts/respond.js"></script>
+                        
+<![endif]-->
+
